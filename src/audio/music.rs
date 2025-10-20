@@ -66,7 +66,7 @@ impl<'src, S> Music<'src, S> {
     }
     /// Create a new `Music` by "opening" it from a stream, with ownership.
     ///
-    /// See [`Self::open_from_stream`].
+    /// See [`Self::open_from_stream_owned`].
     pub fn from_stream_owned(stream: InputStream<'src, S>) -> SfResult<Self> {
         let mut new = Self::new()?;
         new.open_from_stream_owned(stream)?;
